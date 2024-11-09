@@ -9,7 +9,7 @@ plugins {
 
 group = 'com.mythovac'
 version = 'config-template'
-sourceCompatibility = '17'
+sourceCompatibility = 21
 
 repositories {
     maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
@@ -36,7 +36,7 @@ dependencies {
 tasks.withType(KotlinCompile).configureEach {
     kotlinOptions {
         freeCompilerArgs = ['-Xjsr305=strict']
-        jvmTarget = '17'
+        jvmTarget = '21'
     }
 }
 
