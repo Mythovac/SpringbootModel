@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    id 'java' // Java 插件
     id 'org.springframework.boot' version '3.2.10'
     id 'io.spring.dependency-management' version '1.1.5'
     id 'org.jetbrains.kotlin.jvm' version '2.0.20'
@@ -9,7 +10,11 @@ plugins {
 
 group = 'com.mythovac'
 version = 'config-template'
-sourceCompatibility = 21
+
+java{
+    sourceCompatibility = JavaVersion.VERSION_21 // 设置源码兼容 JDK 21
+    targetCompatibility = JavaVersion.VERSION_21 // 设置目标字节码兼容 JDK 21
+}
 
 repositories {
     maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
